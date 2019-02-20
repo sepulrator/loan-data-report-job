@@ -20,6 +20,12 @@ Key Pair,Emr Roles should created beforehand
 * Upload generated under target/scala-2.11/loan-data-report-job-assembly-${VERSION}.jar to s3://emr-spark-jobs-bucket/loan-data-report-job/loan-data-report-job-assembly-${VERSION}.jar
 * While creating emr cluster(size = 3) select jar from s3 as a initial step and pass "--class com.vngrs.challenge.loan.report.LoanDataReportJob" as spark argument
 
+#### S3 Buckets Info
+* Uploaded jars keep under s3://emr-spark-jobs-bucket/loan-data-report-job
+* Loan data csv file is stored in s3://loan-data-bucket/2019/*
+* Schema of csv file is uploaded to s3://loan-data-bucket/schema/schema.csv
+* Reports are generated under s3://loan-data-bucket/report_one and s3://loan-data-bucket/report_two 
+
 #### Notes 
 * Compile project with Scala 2.11 
 * Minimum emr worker instance should be 2 since there is more memory to process the file
