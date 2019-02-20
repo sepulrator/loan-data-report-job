@@ -1,0 +1,1 @@
+addSbtPlugin("net.pishen" % "sbt-lighter" % "1.2.0")
