@@ -31,4 +31,5 @@ Key Pair,Emr Roles should created beforehand
 * Minimum emr worker instance should be 2 since there is more memory to process the file
 * Using sbt lighter plugin is optional. All setups can be configured via aws console
 * After each changes increment version in build.sbt
-* Consider last created emr cluster "vngrs-challenge-cluster"  
+* Consider last created emr cluster "vngrs-challenge-cluster"
+* Bucket name and loan data paths can be override via passing args to spark application. args(0) for bucket name, args(1) for loan data paths. If no args specified, default values are used  
