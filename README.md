@@ -10,7 +10,7 @@ This command;
     * uploads jar to s3
     * creates auto-terminated emr cluster with specified settings in build.sbt with initial spark job execution step
 ```bash  
-> sparkSubmitMain com.vngrs.challenge.loan.report.LoanDataReportJob
+> sparkSubmitMain com.vngrs.challenge.loan.report.Main
 ```
 Key Pair,Emr Roles should created beforehand
 
@@ -18,7 +18,7 @@ Key Pair,Emr Roles should created beforehand
 
 * Generate Fat Jar Using "sbt assembly"
 * Upload generated under target/scala-2.11/loan-data-report-job-assembly-${VERSION}.jar to s3://emr-spark-jobs-bucket/loan-data-report-job/loan-data-report-job-assembly-${VERSION}.jar
-* While creating emr cluster(size = 3) select jar from s3 as a initial step and pass "--class com.vngrs.challenge.loan.report.LoanDataReportJob" as spark argument
+* While creating emr cluster(size = 3) select jar from s3 as a initial step and pass "--class com.vngrs.challenge.loan.report.Main" as spark argument
 
 #### S3 Buckets Info
 * Uploaded jars keep under s3://emr-spark-jobs-bucket/loan-data-report-job
